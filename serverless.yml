@@ -23,7 +23,7 @@ resources:
   - ${file(resources/api-gateway-errors.yml)}
 
 functions:
-  list:
+  listFarms:
     # Defines an HTTP API endpoint that calls the main function in list.js
     handler: list.main
     events:
@@ -31,6 +31,5 @@ functions:
           path: farms
           method: post
           cors: true
-          authorizer: aws_iam
 
 
